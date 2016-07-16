@@ -10,6 +10,10 @@ namespace eBayDealFinder.Controllers
     {
         public ActionResult Index()
         {
+
+
+
+
             return View();
         }
 

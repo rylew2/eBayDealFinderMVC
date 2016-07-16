@@ -13,5 +13,9 @@ namespace eBayDealFinder.DealClasses
         public const string ebayCertID = "YourCertID";   // use your cert ID
         public const string ebayAuthToken = "yourAuthToken";
 
+
+        public const string wootkey = "Your woot key";
+            public const string wootsecret = "Your wootsecret";
+
     }
 }
