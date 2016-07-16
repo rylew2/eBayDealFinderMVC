@@ -2,9 +2,12 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
-using System.Web;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace eBayDealFinder.DealClasses
 {
@@ -147,13 +150,13 @@ namespace eBayDealFinder.DealClasses
             return (avgPrice / i).ToString();
         }
 
-        public void setResultStats(TextBox textBox3, TextBox textBox1)
+       /* public void setResultStats(System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox textBox3, System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox textBox1)
         {
             textBox3.Text = "No of Results:" + getNumberOfResults();
             textBox1.Text = "Average:  " + getAvgPrice();
-        }
+        }*/
 
-        public void setEbayLinks(DataGridView dgv)
+        public void setEbayLinks(System.Windows.Forms.DataGridView dgv)
         {
             DataGridViewRow r;
             for (int j = 0; j < ed.Length; j++)
@@ -172,6 +175,7 @@ namespace eBayDealFinder.DealClasses
 
         public void getEbayCompletedItems(string opName, string keywords)
         {
+
             using (FindingServicePortTypeClient client = new FindingServicePortTypeClient())
             {
                 MessageHeader header = MessageHeader.CreateHeader("CustomHeader", "", "");
@@ -237,7 +241,10 @@ namespace eBayDealFinder.DealClasses
             return ift;
         }
 
-        
+
+
+
+
 
 
     }

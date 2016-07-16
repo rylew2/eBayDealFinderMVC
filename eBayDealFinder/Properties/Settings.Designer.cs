@@ -22,15 +22,5 @@ namespace eBayDealFinder.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://svcs.ebay.com/services/search/FindingService/v1")]
-        public string eBayDealFinder_ebaySR_FindingService {
-            get {
-                return ((string)(this["eBayDealFinder_ebaySR_FindingService"]));
-            }
-        }
     }
 }
