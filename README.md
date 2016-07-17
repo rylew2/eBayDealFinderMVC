@@ -12,7 +12,6 @@ Currently only one Deal of the Day rss feed is compared against eBay prices.
 The eBay Finding API is used in this program. A service reference to the following is included:
 http://developer.ebay.com/webservices/Finding/latest/FindingService.wsdl
 
-Other API are considered
 
 ## Issues and New Features
 - Since this codebase was migrated from a WinForms application, much of the code is misplaced and needs to be refactored (ie.. eBay API data manipulated in the controller file)
