@@ -8,8 +8,8 @@ namespace eBayDealFinder.Utility
     public class Credentials
     {
         //Not tracked on GitHub - need to supply your own credentials
-        public class Credentials
-        {
+       
+                  //
             //Production eBay                             
             public const string ebayDevID = "YourDevID";      // use your dev ID
             public const string ebayAppID = "YourAppID";     // use your app ID
@@ -23,4 +23,4 @@ namespace eBayDealFinder.Utility
         }
 
     }
-}
+
