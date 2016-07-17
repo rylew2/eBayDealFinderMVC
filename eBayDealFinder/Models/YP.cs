@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace eBayDealFinder.DealClasses
+namespace eBayDealFinder.Models
 {
 
     // https://pipes.yahoo.com/pipes/pipe.info?_id=MNyp_zvL2xGa2vJmmLokhQ

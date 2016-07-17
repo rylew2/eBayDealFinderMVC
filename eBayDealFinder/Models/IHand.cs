@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace eBayDealFinder.DealClasses
+namespace eBayDealFinder.Models
 {
 
     public class Info

@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace eBayDealFinder.DealClasses
+namespace eBayDealFinder.Models
 {
     public class Deal
     {
+
+
         public string title { get; set; }
         public double price { get; set; }
         public DateTimeOffset pub { get; set; }
         public double compEbayPrice { get; set; }
         public string dealURL { get; set; }
 
+
+        //Constructors
         public Deal(string title, double price)
         {
             this.title = title;

@@ -1,15 +1,17 @@
-﻿using eBayDealFinder.ebaySR;
+﻿using eBayDealFinder.DealClasses;
+using eBayDealFinder.ebaySR;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
-namespace eBayDealFinder.DealClasses
+
+namespace eBayDealFinder.Models
 {
     //Represents attributes for 1 ebay product result
     public class EbayData
