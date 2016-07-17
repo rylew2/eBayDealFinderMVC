@@ -6,7 +6,7 @@ This program pulls deals from a Deal of the Day XML feed and compares their pric
 Currently only one Deal of the Day rss feed is compared against eBay prices. 
 
 ## Usage
-
+To see the price comparison, the program needs a breakpoint at the end of the compareDealsToEbay() function and watch the anotherdd variable. 
 
 ## API References
 The eBay Finding API is used in this program. A service reference to the following is included:
