@@ -2,8 +2,8 @@
 
 ## Overview
 
-This program pulls deals from a Deal of the Day XML feed and compares their price to an average eBay completed items price to see if a price arbitrage exists. 
-Currently only one Deal of the Day rss feed is compared against eBay prices. 
+This application pulls deals from a Deal of the Day XML feed and compares their price to an average eBay completed items price to see if a price arbitrage exists. 
+Currently only one Deal of the Day rss feed is compared against eBay prices although remnants of other deal data is still left in the program from when those sites were up. 
 
 ## Usage
 To see the price comparison, the program needs a breakpoint at the end of the compareDealsToEbay() function and watch the anotherdd variable. 
