@@ -202,11 +202,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Credentials.cs" />
     <Compile Include="Models\DealData.cs" />
     <Compile Include="Models\EbayData.cs" />
     <Compile Include="Models\IHand.cs" />
     <Compile Include="Utility\Credentials.cs" />
+    <Compile Include="Utility\DataManagement.cs" />
     <Compile Include="Utility\MyXmlReader.cs" />
     <Compile Include="Utility\SortablebindingList.cs" />
     <Compile Include="Models\YP.cs" />
@@ -244,6 +244,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\34dc472a-0ee0-4-231-b9ee.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -335,9 +336,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>

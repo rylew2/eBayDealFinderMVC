@@ -1,46 +1,17 @@
-﻿using eBayDealFinder.Models;
+﻿using eBayDealFinder.DealClasses;
+using eBayDealFinder.Models;
 using System;
-using System.Web.Mvc;
-using eBayDealFinder.Utility;
-using System.Xml;
-using System.ServiceModel.Syndication;
-using eBayDealFinder.DealClasses;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Syndication;
 using System.Text.RegularExpressions;
+using System.Web;
+using System.Xml;
 
-namespace eBayDealFinder.Controllers
+namespace eBayDealFinder.Utility
 {
-    public class HomeController : Controller
+    public  class DataManagement
     {
-        public ActionResult Index()
-        {
-    
-                compareDealsToEbay(getDealRSS());
-
-   
-          
-            
-            return View();
-        }
-
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-
-
 
 
         //Compare each deal to ebay
@@ -72,9 +43,64 @@ namespace eBayDealFinder.Controllers
                     }
                 }
             }
-           var x = 2;
+            var x = 2;
         }
 
+         /* public void button1_Click(object sender, EventArgs e)
+        {
+            string search = textBox2.Text;
+
+            EbayDatum ed = new EbayDatum();
+            ed.getEbayCompletedItems("findCompletedItems", textBox2.Text);
+
+            ed.useMajorEbayCategory();
+
+            dataGridView1.DataSource = new SortableBindingList<EbayData>(ed.ed);
+            ed.setResultStats(textBox3, textBox1);
+            ed.setEbayLinks(dataGridView1);
+        }
+
+        public void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
+
+        public void richTextBox1_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+      public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // e.RowIndex
+            if (e.ColumnIndex == 0)
+            {
+                string sUrl = dataGridView1.Rows[e.RowIndex].Cells[0].Tag.ToString();
+                ProcessStartInfo sInfo = new ProcessStartInfo(sUrl);
+                Process.Start(sInfo);
+            }
+        }
+
+        public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0 && dataGridView2.Rows[e.RowIndex].Cells[0].Tag != null)
+            {
+                string sUrl = dataGridView2.Rows[e.RowIndex].Cells[0].Tag.ToString();
+                ProcessStartInfo sInfo = new ProcessStartInfo(sUrl);
+                Process.Start(sInfo);
+            }
+        }*/
+
+        //Get Deal Aggregator RSS 
+        public void button2_Click(object sender, EventArgs e)
+        {
+            DealData dd = getDealRSS();
+            //  DealData dd = SACDeals();
+            compareDealsToEbay(dd);
+        }
 
         public DealData getDealRSS()
         {
@@ -152,10 +178,6 @@ namespace eBayDealFinder.Controllers
             }
             return dd;
         }
-
-
-
-
 
 
 

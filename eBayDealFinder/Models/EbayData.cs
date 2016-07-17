@@ -1,15 +1,13 @@
-﻿using eBayDealFinder.DealClasses;
-using eBayDealFinder.ebaySR;
+﻿using eBayDealFinder.ebaySR;
+using eBayDealFinder.Utility;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Windows.Forms;
-
 
 namespace eBayDealFinder.Models
 {
@@ -73,7 +71,7 @@ namespace eBayDealFinder.Models
 
     public class EbayDatum
     {
-
+       
         //Production                             
         const string ebayDevID = Credentials.ebayDevID;
         const string ebayAppID = Credentials.ebayAppID;

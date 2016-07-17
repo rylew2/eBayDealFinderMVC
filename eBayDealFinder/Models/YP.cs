@@ -4,7 +4,7 @@ namespace eBayDealFinder.Models
 {
 
     // https://pipes.yahoo.com/pipes/pipe.info?_id=MNyp_zvL2xGa2vJmmLokhQ
-
+    
     public class YPublished
     {
         public string hour { get; set; }
