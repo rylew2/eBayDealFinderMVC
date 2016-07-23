@@ -14,6 +14,7 @@ namespace eBayDealFinder.Models
     //Represents attributes for 1 ebay product result
     public class EbayData
     {
+        private int EbayDataId;
         private FindCompletedItemsResponse response;
         private int i;
 
@@ -68,16 +69,16 @@ namespace eBayDealFinder.Models
         }
 
     }
+   
 
     public class EbayDatum
     {
-       
         //Production                             
-        const string ebayDevID = Credentials.ebayDevID;
-        const string ebayAppID = Credentials.ebayAppID;
-        const string ebayCertID = Credentials.ebayCertID;
-        const string ebayAuthToken = Credentials.ebayAuthToken;
-
+    const string ebayDevID = Credentials.ebayDevID;
+    const string ebayAppID = Credentials.ebayAppID;
+    const string ebayCertID = Credentials.ebayCertID;
+    const string ebayAuthToken = Credentials.ebayAuthToken;
+   
         public EbayData[] ed { get; set; }
 
         //Initialize with array

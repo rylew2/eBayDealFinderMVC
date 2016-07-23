@@ -32,5 +32,7 @@ namespace eBayDealFinder.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<EbayData> EbayData { get; set; }
     }
 }
