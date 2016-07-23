@@ -44,7 +44,7 @@ namespace eBayDealFinder.Tests.Controllers
             // Arrange
             HomeController controller = new HomeController();
 
-            // Act 
+            // Act
             ViewResult result = controller.Contact() as ViewResult;
 
             // Assert
