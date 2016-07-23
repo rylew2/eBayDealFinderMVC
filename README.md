@@ -17,7 +17,7 @@ To see the price comparison, the program needs a breakpoint at the end of the co
 ## Issues and New Features
 - Since this codebase was migrated from a WinForms application, much of the code is misplaced and needs to be refactored (ie.. eBay API data manipulated in the controller file)
 - Integrate other deal of the day services - currently only one rss feed is being used
-- Distringuish condition of deal of the day offers (ie refurbished, used, etc..) 
+- Distinguish condition of deal of the day offers (ie refurbished, used, etc..) 
 - No database is setup to store the data
 
 
