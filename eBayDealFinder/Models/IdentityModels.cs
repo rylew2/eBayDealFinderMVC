@@ -21,9 +21,12 @@ namespace eBayDealFinder.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ss2012", throwIfV1Schema: false)
         {
         }
+
+        public DbSet<Album> Albums { get; set; }
+
 
         public static ApplicationDbContext Create()
         {

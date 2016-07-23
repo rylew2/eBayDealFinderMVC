@@ -89,6 +89,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -200,8 +201,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Album.cs" />
+    <Compile Include="Controllers\AlbumsController.cs" />
+    <Compile Include="Controllers\AspNetRole.cs" />
+    <Compile Include="Controllers\AspNetUser.cs" />
+    <Compile Include="Controllers\AspNetUserClaim.cs" />
+    <Compile Include="Controllers\AspNetUserLogin.cs" />
+    <Compile Include="Controllers\C__MigrationHistory.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Model1.cs" />
+    <Compile Include="Models\Album.cs" />
     <Compile Include="Models\DealData.cs" />
     <Compile Include="Models\EbayData.cs" />
     <Compile Include="Models\IHand.cs" />
@@ -1159,6 +1169,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <None Include="Service References\ebaySR\FindService.wsdl" />
+    <Content Include="Views\Albums\Create.cshtml" />
+    <Content Include="Views\Albums\Delete.cshtml" />
+    <Content Include="Views\Albums\Details.cshtml" />
+    <Content Include="Views\Albums\Edit.cshtml" />
+    <Content Include="Views\Albums\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
