@@ -8,10 +8,11 @@ Currently only one Deal of the Day rss feed is compared against eBay prices alth
 ## Usage
 To see the price comparison, the program needs a breakpoint at the end of the compareDealsToEbay() function and a watch on the anotherdd variable. 
 
-## API References
-The eBay Finding API is used in this program. A service reference to the following is included:
-http://developer.ebay.com/webservices/Finding/latest/FindingService.wsdl
-
+## API and External References
+  The eBay Finding API is used in this program. A service reference to the following is included:
+  http://developer.ebay.com/webservices/Finding/latest/FindingService.wsdl
+  
+  External RSS Deal of the Day feed: http://feeds.feedburner.com/Dealsucker?format=xml
 
 ## Issues and New Features
 - Since this codebase was migrated from a WinForms application, much of the code is misplaced and needs to be refactored (ie.. eBay API data manipulated in the controller file)
