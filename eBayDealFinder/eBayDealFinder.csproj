@@ -201,11 +201,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AspNetRole.cs" />
-    <Compile Include="Controllers\AspNetUser.cs" />
-    <Compile Include="Controllers\AspNetUserClaim.cs" />
-    <Compile Include="Controllers\AspNetUserLogin.cs" />
-    <Compile Include="Controllers\C__MigrationHistory.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Models\DealData.cs" />
