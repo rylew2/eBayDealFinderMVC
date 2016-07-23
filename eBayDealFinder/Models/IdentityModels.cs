@@ -25,7 +25,7 @@ namespace eBayDealFinder.Models
         {
         }
 
-        public DbSet<Album> Albums { get; set; }
+        //public DbSet<Album> Albums { get; set; }
 
 
         public static ApplicationDbContext Create()
