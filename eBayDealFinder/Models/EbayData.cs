@@ -3,6 +3,7 @@ using eBayDealFinder.Utility;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
@@ -14,7 +15,6 @@ namespace eBayDealFinder.Models
     //Represents attributes for 1 ebay product result
     public class EbayData
     {
-        private int EbayDataId;
         private FindCompletedItemsResponse response;
         private int i;
 
@@ -24,6 +24,8 @@ namespace eBayDealFinder.Models
 
         //selling status
         public int bidCount { get; set; }
+
+        [StringLength(100)]
         public string sellingState { get; set; }
         public double endPrice { get; set; }
 

@@ -207,6 +207,14 @@
     <Compile Include="Migrations\201607230647164_InitialCreate.Designer.cs">
       <DependentUpon>201607230647164_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607231519128_RemoveEbayDataId.cs" />
+    <Compile Include="Migrations\201607231519128_RemoveEbayDataId.Designer.cs">
+      <DependentUpon>201607231519128_RemoveEbayDataId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607231535209_AdjustSellingState.cs" />
+    <Compile Include="Migrations\201607231535209_AdjustSellingState.Designer.cs">
+      <DependentUpon>201607231535209_AdjustSellingState.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DealData.cs" />
     <Compile Include="Models\EbayData.cs" />
@@ -1189,6 +1197,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607230647164_InitialCreate.resx">
       <DependentUpon>201607230647164_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607231519128_RemoveEbayDataId.resx">
+      <DependentUpon>201607231519128_RemoveEbayDataId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607231535209_AdjustSellingState.resx">
+      <DependentUpon>201607231535209_AdjustSellingState.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
