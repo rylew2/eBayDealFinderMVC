@@ -195,25 +195,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Concrete\ApplicationDbContext.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Concrete\ApplicationRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Migrations\201607230647164_InitialCreate.cs" />
-    <Compile Include="Migrations\201607230647164_InitialCreate.Designer.cs">
-      <DependentUpon>201607230647164_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607231519128_RemoveEbayDataId.cs" />
-    <Compile Include="Migrations\201607231519128_RemoveEbayDataId.Designer.cs">
-      <DependentUpon>201607231519128_RemoveEbayDataId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607231535209_AdjustSellingState.cs" />
-    <Compile Include="Migrations\201607231535209_AdjustSellingState.Designer.cs">
-      <DependentUpon>201607231535209_AdjustSellingState.cs</DependentUpon>
+    <Compile Include="Migrations\201607290617385_Initial.cs" />
+    <Compile Include="Migrations\201607290617385_Initial.Designer.cs">
+      <DependentUpon>201607290617385_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DealData.cs" />
@@ -1195,14 +1190,8 @@
     <WCFMetadataStorage Include="Service References\ebaySR\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607230647164_InitialCreate.resx">
-      <DependentUpon>201607230647164_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607231519128_RemoveEbayDataId.resx">
-      <DependentUpon>201607231519128_RemoveEbayDataId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607231535209_AdjustSellingState.resx">
-      <DependentUpon>201607231535209_AdjustSellingState.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607290617385_Initial.resx">
+      <DependentUpon>201607290617385_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

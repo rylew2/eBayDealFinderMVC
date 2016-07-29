@@ -5,14 +5,14 @@ namespace eBayDealFinder.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<eBayDealFinder.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<eBayDealFinder.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(eBayDealFinder.Models.ApplicationDbContext context)
+        protected override void Seed(eBayDealFinder.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

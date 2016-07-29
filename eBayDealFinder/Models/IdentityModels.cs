@@ -18,21 +18,5 @@ namespace eBayDealFinder.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public ApplicationDbContext()
-            : base("ss2012", throwIfV1Schema: false)
-        {
-        }
-
-        //public DbSet<Album> Albums { get; set; }
-
-
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-
-        public DbSet<EbayData> EbayData { get; set; }
-    }
+ 
 }

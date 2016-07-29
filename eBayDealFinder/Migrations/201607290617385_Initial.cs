@@ -3,7 +3,7 @@ namespace eBayDealFinder.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -14,7 +14,7 @@ namespace eBayDealFinder.Migrations
                         id = c.String(nullable: false, maxLength: 128),
                         title = c.String(),
                         bidCount = c.Int(nullable: false),
-                        sellingState = c.String(),
+                        sellingState = c.String(maxLength: 100),
                         endPrice = c.Double(nullable: false),
                         condID = c.Int(nullable: false),
                         condDisplayName = c.String(),
@@ -113,7 +113,7 @@ namespace eBayDealFinder.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.EbayData");
+            DropTable("dbo.EbayDatas");
         }
     }
 }
