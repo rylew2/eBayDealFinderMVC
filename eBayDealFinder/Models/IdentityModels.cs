@@ -16,6 +16,9 @@ namespace eBayDealFinder.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+
+        //Move DbContext to separate file
     }
 
  

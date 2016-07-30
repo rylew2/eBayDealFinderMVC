@@ -1,24 +1,23 @@
-﻿using eBayDealFinder.Models;
-using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using eBayDealFinder.Utility;
-using System.Xml;
-using System.ServiceModel.Syndication;
-using eBayDealFinder.DealClasses;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+using eBayDealFinder.Abstract;
 
 namespace eBayDealFinder.Controllers
 {
     public class HomeController : Controller
     {
+
+        private IRepository repo;
+
+        public HomeController(IRepository repository)
+        {
+            repo = repository;
+        }
+
         public ActionResult Index()
         {
-    
-               // compareDealsToEbay(getDealRSS());
-
-            
+                //eBayDealFinder.Utility.DataManagement.compareDealsToEbay
+                DataManagement.compareDealsToEbay(DataManagement.getDealRSS());
             
             return View();
         }
@@ -39,5 +38,10 @@ namespace eBayDealFinder.Controllers
         }
 
 
+
+
+
+
     }
+    
 }

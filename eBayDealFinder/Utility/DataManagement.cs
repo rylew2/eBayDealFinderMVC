@@ -15,7 +15,7 @@ namespace eBayDealFinder.Utility
 
 
         //Compare each deal to ebay
-        public void compareDealsToEbay(DealData dd)
+        public static void compareDealsToEbay(DealData dd)
         {
             DealData anotherdd = new DealData(new List<Deal>());
             for (int i = 0; i < dd.getCount(); i++)
@@ -92,7 +92,7 @@ namespace eBayDealFinder.Utility
                 ProcessStartInfo sInfo = new ProcessStartInfo(sUrl);
                 Process.Start(sInfo);
             }
-        }*/
+        }
 
         //Get Deal Aggregator RSS 
         public void button2_Click(object sender, EventArgs e)
@@ -100,9 +100,9 @@ namespace eBayDealFinder.Utility
             DealData dd = getDealRSS();
             //  DealData dd = SACDeals();
             compareDealsToEbay(dd);
-        }
+        }*/
 
-        public DealData getDealRSS()
+        public static DealData getDealRSS()
         {
             string url = "http://feeds.feedburner.com/Dealsucker?format=xml";
 
@@ -146,7 +146,7 @@ namespace eBayDealFinder.Utility
             return dd;
         }
 
-        public DealData SACDeals()
+        public static DealData SACDeals()
         {
             string url = "http://rss.steepandcheap.com/docs/steepcheap/rss.xml";
             XmlReader reader = XmlReader.Create(url);
