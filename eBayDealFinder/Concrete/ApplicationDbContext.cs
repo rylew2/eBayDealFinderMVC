@@ -23,5 +23,7 @@ namespace eBayDealFinder
         }
 
         public DbSet<EbayData> EbayData { get; set; }
+
+        public System.Data.Entity.DbSet<eBayDealFinder.Models.Album> Albums { get; set; }
     }
 }

@@ -113,7 +113,7 @@ namespace eBayDealFinder.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.EbayDatas");
+            DropTable("dbo.EbayData");
         }
     }
 }
