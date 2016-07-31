@@ -15,20 +15,21 @@ namespace eBayDealFinder.Utility
 
 
         //Compare each deal to ebay
-        public static void compareDealsToEbay(DealData dd)
+        public static DealData compareDealsToEbay(DealData dd)
         {
-            DealData anotherdd = new DealData(new List<Deal>());
+            DealData DealData = new DealData(new List<Deal>());
             for (int i = 0; i < dd.getCount(); i++)
             {
                 string search = dd.getTitle(i);
                 // EbayData[] ed = getEbayCompletedItems("findCompletedItems", search);
 
                 EbayDatum ed = new EbayDatum();
-                ed.getEbayCompletedItems("findCompletedItems", search);
+
+                //call to eBay Finding Service API
+                ed.getEbayCompletedItems("findCompletedItems", search); 
 
                 if (ed.getNumberOfResults() >= 1)
                 {
-
                     ed.useMajorEbayCategory();
                     double avgEbayPrice = double.Parse(ed.getAvgPrice());
                     var dealPrice = dd.getPrice(i);
@@ -39,11 +40,11 @@ namespace eBayDealFinder.Utility
                         //      DateTimeOffset dt = o.Add(new TimeSpan(-2, 0, 0));
 
                         Deal d = new Deal(dealTitle, dealPrice, avgEbayPrice, dd.deals[i].dealURL);
-                        anotherdd.deals.Add(d);
+                        DealData.deals.Add(d);
                     }
                 }
             }
-            var x = 2;
+            return DealData;
         }
 
          /* public void button1_Click(object sender, EventArgs e)

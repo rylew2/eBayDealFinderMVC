@@ -22,7 +22,9 @@ namespace eBayDealFinder
             return new ApplicationDbContext();
         }
 
-        public DbSet<EbayData> EbayData { get; set; }
+        //EbayData is used as an intermediate object and does not need to be stored
+       // public DbSet<EbayData> EbayData { get; set; }
+        public DbSet<Deal> Deals { get; set; }
 
         public System.Data.Entity.DbSet<eBayDealFinder.Models.Album> Albums { get; set; }
     }

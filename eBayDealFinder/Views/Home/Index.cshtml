@@ -1,4 +1,56 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model eBayDealFinder.Models.DealData
+
+@{
+    ViewBag.Title = "Index";
 }
 
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.deals[0].title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deals[0].price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deals[0].pub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deals[0].compEbayPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deals[0].dealURL)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.deals)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pub)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.compEbayPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dealURL)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DealID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DealID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DealID })
+            </td>
+        </tr>
+    }
+
+</table>

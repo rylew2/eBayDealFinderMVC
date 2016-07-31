@@ -14,62 +14,55 @@ namespace eBayDealFinder.Concrete
 
         private ApplicationDbContext context = new ApplicationDbContext();
         
-        public IEnumerable<EbayData> ApplicationDbContext {
-            get { return context.EbayData;  }
-        }
-
-        //Create CRUD operations with UoW pattern
-        // Save context at end
-
-        public void SaveEbayData(EbayData ebaydata)
-        {
-            context.SaveChanges();
-        }
-
-        public EbayData Delete(int edID)
-        {
-            EbayData ed = context.EbayData.Find(edID);
-            if(ed != null)
-            {
-                context.EbayData.Remove(ed);
-                //context.SaveChanges();
-
-            }
-            return ed;
-        }
-
-        //UoW pattern  to allow a transaction to be built up and finally saved
-        public void SaveChanges()
-        {
-            context.SaveChanges();
-        }
+        //public IEnumerable<EbayData> ApplicationDbContext {
+        //    get { return context.EbayData;  }
+        //}
 
 
-        public IEnumerable<EbayData> GetEbayData()
-        {
-            return context.EbayData.ToList();
-        }
+        //public EbayData Delete(int edID)
+        //{
+        //    EbayData ed = context.EbayData.Find(edID);
+        //    if(ed != null)
+        //    {
+        //        context.EbayData.Remove(ed);
+        //        //context.SaveChanges();
 
-        public EbayData GetEbayDataByID(int id)
-        {
-            return context.EbayData.Find(id);
-        }
+        //    }
+        //    return ed;
+        //}
 
-        public void InsertEbayData(EbayData EbayData)
-        {
-            context.EbayData.Add(EbayData);
-        }
+        ////UoW pattern  to allow a transaction to be built up and finally saved
+        //public void SaveChanges()
+        //{
+        //    context.SaveChanges();
+        //}
 
-        public void DeleteEbayData(int EbayDataID)
-        {
-            EbayData EbayData = context.EbayData.Find(EbayDataID);
-            context.EbayData.Remove(EbayData);
-        }
 
-        public void UpdateEbayData(EbayData EbayData)
-        {
-            context.Entry(EbayData).State = EntityState.Modified;
-        }
+        //public IEnumerable<EbayData> GetEbayData()
+        //{
+        //    return context.EbayData.ToList();
+        //}
+
+        //public EbayData GetEbayDataByID(int id)
+        //{
+        //    return context.EbayData.Find(id);
+        //}
+
+        //public void InsertEbayData(EbayData EbayData)
+        //{
+        //    context.EbayData.Add(EbayData);
+        //}
+
+        //public void DeleteEbayData(int EbayDataID)
+        //{
+        //    EbayData EbayData = context.EbayData.Find(EbayDataID);
+        //    context.EbayData.Remove(EbayData);
+        //}
+
+        //public void UpdateEbayData(EbayData EbayData)
+        //{
+        //    context.Entry(EbayData).State = EntityState.Modified;
+        //}
 
         public void Save()
         {

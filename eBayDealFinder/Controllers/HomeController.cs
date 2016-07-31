@@ -1,25 +1,25 @@
 ﻿using System.Web.Mvc;
 using eBayDealFinder.Utility;
-using eBayDealFinder.Abstract;
+using eBayDealFinder.Models;
 
 namespace eBayDealFinder.Controllers
 {
     public class HomeController : Controller
     {
 
-        private IRepository repo;
+        //private IRepository repo;
 
-        public HomeController(IRepository repository)
-        {
-            repo = repository;
-        }
+        //public HomeController(IRepository repository)
+        //{
+        //    repo = repository;
+        //}
 
         public ActionResult Index()
         {
                 //eBayDealFinder.Utility.DataManagement.compareDealsToEbay
-                DataManagement.compareDealsToEbay(DataManagement.getDealRSS());
+              DealData dd =  DataManagement.compareDealsToEbay(DataManagement.getDealRSS());
             
-            return View();
+            return View(dd);
         }
 
 

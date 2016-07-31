@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace eBayDealFinder.Models
@@ -7,7 +8,9 @@ namespace eBayDealFinder.Models
     public class Deal
     {
 
+        public int DealID { get; set; }
 
+        [DisplayName("MyTitle")]
         public string title { get; set; }
         public double price { get; set; }
         public DateTimeOffset pub { get; set; }
@@ -50,6 +53,7 @@ namespace eBayDealFinder.Models
 
     public class DealData
     {
+    
         public List<Deal> deals { get; set; }
 
         public DealData() { }

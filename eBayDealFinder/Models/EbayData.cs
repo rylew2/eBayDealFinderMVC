@@ -30,7 +30,7 @@ namespace eBayDealFinder.Models
         public double endPrice { get; set; }
 
         //Condition
-        public int condID { get; set; }                  //1000=new, 1500=new other see details, 1750=new with defects, 2000 =refurbished
+        public int ConditionID { get; set; }                  //1000=new, 1500=new other see details, 1750=new with defects, 2000 =refurbished
         public string condDisplayName { get; set; }
 
         //Listing info
@@ -59,7 +59,9 @@ namespace eBayDealFinder.Models
             this.endPrice = response.searchResult.item[i].sellingStatus.currentPrice.Value;
 
             this.condDisplayName = response.searchResult.item[i].condition.conditionDisplayName;
-            this.condID = response.searchResult.item[i].condition.conditionId;
+
+            //1000=new, 1500=new other see details, 1750=new with defects, 2000 =refurbished
+            this.ConditionID = response.searchResult.item[i].condition.conditionId;
 
             this.endTime = response.searchResult.item[i].listingInfo.endTime;
             this.listingType = response.searchResult.item[i].listingInfo.listingType;
