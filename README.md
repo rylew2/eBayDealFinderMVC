@@ -14,11 +14,13 @@ To see the price comparison, the program needs a breakpoint at the end of the co
   
   External RSS Deal of the Day feed: http://feeds.feedburner.com/Dealsucker?format=xml
 
-## Issues and New Features
-- Since this codebase was migrated from a WinForms application, much of the code is misplaced and needs to be refactored (ie.. eBay API data manipulated in the controller file)
-- Integrate other deal of the day services - currently only one rss feed is being used
+## Issues and Planned Features
+- Since this codebase was migrated from a WinForms application, much of the code is misplaced and needs to be refactored (ie.. eBay API data manipulated in the controller file, uneeded Deal of the Day feeds used) 
+- Integrate other deal of the day services - currently only one rss feed is being used. The application was originally using multiple feeds. 
 - Distinguish condition of deal of the day offers (ie refurbished, used, etc..) 
-- No database is setup to store the data
+- Set up controller tests
+- Setup Azure/AppHarbor hosting 
+
 
 
 
